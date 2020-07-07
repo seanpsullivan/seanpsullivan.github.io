@@ -27,7 +27,13 @@
 </form>
 </body>
 <script>
+
+setInterval(function() { alert("Hello"); }, 3000);
+
+setInterval(function() {
   window.parent.postMessage('hello from the iframe', '*');
+}, 3000);
+
   console.log('baby iframe console log');
 </script>
 </html>
