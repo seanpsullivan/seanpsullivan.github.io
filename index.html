@@ -7,12 +7,12 @@
 <h1>postMessage test for CRM</h1>
 <h2>Testing, testing.</h2>
 <p>Click the button!</p>
-<button id="go">Click me</button>
+<button id="go">Click meeee</button>
 </body>
 <script>
 document.getElementById("go").onclick = function() {
   console.log('clicked');
-  window.parent.postMessage('hello from the iframe', '*');
+  window.parent.postMessage('hello from the iframe', 'https://www.unb.ca');
 };
 </script>
 </html>
