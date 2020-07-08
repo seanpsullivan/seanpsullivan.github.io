@@ -11,7 +11,8 @@
 </body>
 <script>
 document.getElementById("go").onclick = function() {
-  window.parent.postMessage('hello from the iframe', 'https://unb.ca');
+  console.log('clicked');
+  window.parent.postMessage('hello from the iframe', 'https://www.unb.ca');
 };
 </script>
 </html>
