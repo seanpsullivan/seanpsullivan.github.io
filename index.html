@@ -4,32 +4,14 @@
 
 </head>
 <body>
-<h1>Form test</h1>
-<p>Form test content</p>
-<form>
- <ul>
-  <li>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
-  </li>
-  <li>
-    <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_email">
-  </li>
-  <li>
-    <label for="msg">Message:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </li>
-  <li class="button">
-  <input type="submit" name="submit" id="submitCreateAccount" value="Submit Information">
-  </li>
- </ul>
-</form>
+<h1>postMessage test for CRM</h1>
+<h2>Testing, testing.</h2>
+<p>Click the button!</p>
+<button id="go">Make it rain</button>
 </body>
 <script>
-
-setTimeout(function() {
+document.getElementById("go").onclick = function() {
   window.parent.postMessage('hello from the iframe', 'https://unb.ca');
-}, 3000);
+};
 </script>
 </html>
