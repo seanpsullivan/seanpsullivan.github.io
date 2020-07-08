@@ -6,7 +6,14 @@
 <body>
 <h1>postMessage test for CRM</h1>
 <h2>Testing, testing.</h2>
-<p>Click the button!</p>
+<p>This uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">window.postMessage</a> to send a message from this iframe to the parent page.</p>
+<p>Clicking the button, or in our real-world case, submitting the form, triggers a secure message from the embedded iframe to the page on which it is embedded. The page then takes whatever action we tell it to (in this case, we change colour to celebrate and then re-direct to a thank-you page).</p>
+<p>Here's the code we're using in the iframe:</p>
+<code>
+document.getElementById("go").onclick = function() {
+  window.parent.postMessage('hello from the iframe', 'https://www.unb.ca');
+};
+</code>
 <button id="go">Click meeee</button>
 </body>
 <script>
