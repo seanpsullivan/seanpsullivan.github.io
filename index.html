@@ -11,8 +11,9 @@
 <button id="go" style="padding:15px 30px">Click meeee</button>
 </body>
 <script>
-document.getElementById("go").onclick = function() {
-  window.parent.postMessage('hello from the iframe', 'https://www.unb.ca');
+document.getElementById("submitCreateAccount").onclick = function() {
+  console.log("Successful click!")
+  window.parent.postMessage('Hello from the iframe', 'https://www.unb.ca');
 };
 </script>
 </html>
