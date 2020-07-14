@@ -1,5 +1,4 @@
 window.onload = function(){
-    setInterval(function(){ console.log("Script works!"); }, 3000);
     document.getElementById("submitCreateAccount").onclick = function(event) {
       console.log("Submit button was clicked!");
       event.preventDefault();
