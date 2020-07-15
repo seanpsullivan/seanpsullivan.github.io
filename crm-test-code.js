@@ -1,14 +1,9 @@
 window.onload = function(){
+  function formSubmit(event) {
+    window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+  }
 
-//    document.getElementById("submitCreateAccount").onclick = function(event) {
-//      event.preventDefault();
-//      window.parent.postMessage('', 'https://www.unb.ca');
-
-    function formSubmit(event) {
-      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-    }
-
-    const form = document.getElementById('createForm');
-    form.addEventListener('submit', formSubmit);
-    };
+  const form = document.getElementById('createForm');
+  form.addEventListener('submit', formSubmit);
+  };
 };
