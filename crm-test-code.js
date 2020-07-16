@@ -1,10 +1,13 @@
 window.onload = function(){
   // send postMessage after form is submitted
   function formSubmit(event) {
-      console.log("counting back from 5!")
-      setTimeout(function() {window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca'); 5000);
+    setTimeout(function(){
+      console.log('counting down from 5!')
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+    }, 5000);
   }
   const form = document.getElementById('createForm');
+
   form.addEventListener('submit', formSubmit);
 
   // Force postal code to uppercase
