@@ -1,7 +1,5 @@
 window.onload = function(){
-
   window.addEventListener('beforeunload', function (e) {
-    console.log('Form submitted!');
     window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
   });
 
