@@ -2,12 +2,11 @@ window.onload = function(){
   // send postMessage after form is submitted
   function formSubmit(event) {
     setTimeout(function(){
-      console.log('counting down from 5!')
+      console.log('counting down from 3!')
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-    }, 5000);
+    }, 3000);
   }
   const form = document.getElementById('createForm');
-
   form.addEventListener('submit', formSubmit);
 
   // Force postal code to uppercase
