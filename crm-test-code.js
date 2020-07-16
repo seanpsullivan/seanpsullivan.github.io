@@ -7,7 +7,7 @@ window.onload = function(){
     }, 3000);
   }
   const form = document.getElementById('createForm');
-  form.addEventListener('submit', formSubmit);
+  form.addEventListener('beforeunload', formSubmit);
 
   // Force postal code to uppercase
   // https://www.the-art-of-web.com/html/input-field-uppercase/
