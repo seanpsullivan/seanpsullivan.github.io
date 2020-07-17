@@ -1,7 +1,8 @@
 window.onload = function(){
 
   // Check if the #createForm element exists
-  if (document.getElementById("createForm")) {
+  var formPage = document.getElementById("createForm");
+  if formPage {
     console.log ('i see the form!');
     // Listen for the beforeunload event after the form submits
     window.addEventListener('beforeunload', function (e) {
