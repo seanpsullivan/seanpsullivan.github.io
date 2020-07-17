@@ -11,9 +11,8 @@ window.onload = function(){
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');// Do something...
     };
     // Listen for the beforeunload event after the form submits
-      window.addEventListener('beforeunload', someFunction, false);
-      window.addEventListener('pagehide', someFunction, false);
-    });
+      window.addEventListener('beforeunload', sendMessage, false);
+      window.addEventListener('pagehide', sendMessage, false);
 
 
     // Force postal code to uppercase
