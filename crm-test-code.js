@@ -1,8 +1,13 @@
 window.onload = function(){
-  window.addEventListener('beforeunload', function (e) {
-    window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-  });
 
+  // Check if the #createForm element exists
+  if (document.getElementById("createForm")) {
+    // Listen for the beforeunload event after the form submits
+    window.addEventListener('beforeunload', function (e) {
+      // Send a postMessage to the parent page
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+    });
+  }
 
   // Force postal code to uppercase
   // https://www.the-art-of-web.com/html/input-field-uppercase/
@@ -13,6 +18,7 @@ window.onload = function(){
     e.target.value = e.target.value.toUpperCase();
     e.target.setSelectionRange(start, end);
   }
-
   document.getElementById("address1_postalcode").addEventListener("keyup", forceInputUppercase, false);
+
+// end onload
 };
