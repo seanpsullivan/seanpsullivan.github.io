@@ -1,5 +1,5 @@
 window.onload = function(){
-
+  console.log("window loaded");
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
