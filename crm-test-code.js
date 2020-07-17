@@ -2,7 +2,6 @@ window.onload = function(){
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
-    console.log ('The form is showing on the page.');
     var sendMessage = function (event) {
       // Send a postMessage to the parent page
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
