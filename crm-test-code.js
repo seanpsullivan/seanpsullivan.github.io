@@ -1,19 +1,15 @@
 window.onload = function(){
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
-
   if (formPage) {
-    console.log ('i see the form!');
-
+    console.log ('The form is showing on the page.');
     var sendMessage = function (event) {
       // Send a postMessage to the parent page
-      console.log('message sending');
-      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');// Do something...
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
     };
-    // Listen for the beforeunload event after the form submits
-      window.addEventListener('beforeunload', sendMessage, false);
-      window.addEventListener('pagehide', sendMessage, false);
-
+      // Listen for an event after the form submits
+      window.addEventListener('beforeunload', sendMessage, false); // Desktop
+      window.addEventListener('pagehide', sendMessage, false); //iOS
 
     // Force postal code to uppercase
     // https://www.the-art-of-web.com/html/input-field-uppercase/
