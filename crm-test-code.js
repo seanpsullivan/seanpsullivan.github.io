@@ -1,12 +1,13 @@
+if (window.location.href.indexOf("ProspectInquiry") > -1) {
+   console.log("This is a confirmed submission page");
+   window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+ }
+
 window.onload = function(){
   console.log('loaded');
-  if (window.location.href.indexOf("ProspectInquiry") > -1) {
-     console.log("This is a confirmed submission page");
-     window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-   }
-  // Check if the #createForm element exists
-//  var formPage = document.getElementById("createForm");
-  //if (formPage) {
+//   Check if the #createForm element exists
+  var formPage = document.getElementById("createForm");
+  if (formPage) {
   //  var sendMessage = function (event) {
       // Send a postMessage to the parent page
   //    window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
@@ -28,4 +29,5 @@ window.onload = function(){
     }
     document.getElementById("address1_postalcode").addEventListener("keyup", forceInputUppercase, false);
 
+} // end if
 }; // end onload
