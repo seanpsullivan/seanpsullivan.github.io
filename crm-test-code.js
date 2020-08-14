@@ -3,7 +3,7 @@ console.log("URL is" + location.href);
 
 if (window.location.href.indexOf("inquiry") > -1) {
    console.log("This is a confirmed submission page");
-   window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+//   window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
  }
 
 window.onload = function(){
