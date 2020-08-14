@@ -3,19 +3,18 @@ window.onload = function(){
   console.log('Code is loaded');
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
+  // If it does ...
   if (formPage) {
-
-    // Prep our function
-    var sendMessage = function (event) {
-      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-    };
     // Log the current URL
     let currentPage = location.href;
     console.log(currentPage);
     // Set an interval
     setInterval(function() {
+        // Check every 0.5 s to see if the URL has changed
         if (currentPage != location.href) {
-          sendMessage();
+          // If changes, log it and send the postMessage
+          console.log('URL has changed!');
+          window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
         }
       }, 500);
 
