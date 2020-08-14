@@ -1,15 +1,29 @@
 window.onload = function(){
-  console.log('loaded');
+  // Is the script loaded?
+  console.log('Code is loaded');
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
+
+    // Prep our function
     var sendMessage = function (event) {
-      // Send a postMessage to the parent page
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
     };
-      // Listen for an event after the form submits
-      window.addEventListener('beforeunload', sendMessage, false); // Desktop
-      window.addEventListener('pagehide', sendMessage, false); //iOS
+    // Log the current URL
+    let currentPage = location.href;
+    console.log(currentPage);
+    // Set an interval
+    setInterval(function() {
+        if (currentPage != location.href) {
+          sendMessage();
+        }
+      }, 500);
+
+    // Listen for an event after the form submits
+    // Pausing these for now as it's buggy!
+    //  window.addEventListener('beforeunload', sendMessage, false); // Desktop
+    //  window.addEventListener('pagehide', sendMessage, false); //iOS
+
 
     // Force postal code to uppercase
     // https://www.the-art-of-web.com/html/input-field-uppercase/
