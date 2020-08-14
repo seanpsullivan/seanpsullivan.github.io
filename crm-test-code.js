@@ -1,6 +1,5 @@
 window.onload = function(){
   console.log('loaded');
-
   if (window.location.href.indexOf("ProspectInquiry") > -1) {
      console.log("This is a confirmed submission page");
      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
@@ -28,7 +27,5 @@ window.onload = function(){
       e.target.setSelectionRange(start, end);
     }
     document.getElementById("address1_postalcode").addEventListener("keyup", forceInputUppercase, false);
-
-  } // end if
 
 }; // end onload
