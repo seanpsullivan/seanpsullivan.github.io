@@ -4,12 +4,14 @@ window.onload = function(){
   let myLocation = location.href;
   console.log("URL is" + location.href);
 
+  var sendMessage = function (event) {
+    // Send a postMessage to the parent page
+    window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+  };
+
   if (window.location.href.indexOf("inquirySource") > -1) {
      console.log("This is a confirmed submission page");
-     function (event) {
-       // Send a postMessage to the parent page
-       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-     };
+     sendMessage();
   }
 
 
