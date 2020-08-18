@@ -6,9 +6,13 @@ window.onload = function(){
 
   if (window.location.href.indexOf("inquirySource") > -1) {
      console.log("This is a confirmed submission page");
-     window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-     console.log("postMessage is sent");
+     function (event) {
+       // Send a postMessage to the parent page
+       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+     };
   }
+
+
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
