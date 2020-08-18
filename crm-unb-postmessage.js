@@ -1,23 +1,25 @@
 window.onload = function(){
   console.log('CRM JS is loaded!');
-  // Check location
-  let myLocation = location.href;
-  console.log("URL is" + location.href);
 
-  var sendMessage = function (event) {
-    // Send a postMessage to the parent page
-    window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-  };
+// Check location
+//  let myLocation = location.href;
+//  console.log("URL is" + location.href);
 
-  if (window.location.href.indexOf("inquirySource") > -1) {
-     console.log("This is a confirmed submission page");
-     sendMessage();
-  }
-
+//  if (window.location.href.indexOf("inquirySource") > -1) {
+//     console.log("This is a confirmed submission page");
+//     window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+//  }
 
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
+    var sendMessage = function (event) {
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+    };
+    // Listen for an event after the form submits
+    window.addEventListener('beforeunload', sendMessage, false); // Desktop
+    window.addEventListener('pagehide', sendMessage, false); //iOS
+
     // Force postal code to uppercase
     // https://www.the-art-of-web.com/html/input-field-uppercase/
     function forceInputUppercase(e)
