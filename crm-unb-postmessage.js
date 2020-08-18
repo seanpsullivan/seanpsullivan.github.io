@@ -13,7 +13,13 @@ window.onload = function(){
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
-  
+    var sendMessage = function (event) {
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+    };
+    // Listen for an event after the form submits
+    window.addEventListener('beforeunload', sendMessage, false); // Desktop
+    window.addEventListener('pagehide', sendMessage, false); //iOS
+
     // Force postal code to uppercase
     // https://www.the-art-of-web.com/html/input-field-uppercase/
     function forceInputUppercase(e)
