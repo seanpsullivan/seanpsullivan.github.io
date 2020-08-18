@@ -13,8 +13,10 @@ window.onload = function(){
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
   if (formPage) {
+    console.log("it's a form page!");
     var sendMessage = function (event) {
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+      console.log("postMessage sent");
     };
     // Listen for an event after the form submits
     window.addEventListener('beforeunload', sendMessage, false); // Desktop
