@@ -4,9 +4,14 @@ window.onload = function(){
   var formPage = document.getElementById("createForm");
 
   if (formPage) {
+<<<<<<< HEAD
     console.log ('i see the form!');
     // Listen for the beforeunload event after the form submits
     window.addEventListener('beforeunload', function (e) {
+=======
+    console.log ('The form is showing on the page.');
+    var sendMessage = function (event) {
+>>>>>>> parent of e275a64... Update crm-test-code.js
       // Send a postMessage to the parent page
       console.log('before unload running')
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
