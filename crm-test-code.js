@@ -5,10 +5,13 @@ window.onload = function(){
 
   if (formPage) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log ('i see the form!');
     // Listen for the beforeunload event after the form submits
     window.addEventListener('beforeunload', function (e) {
 =======
+=======
+>>>>>>> parent of e275a64... Update crm-test-code.js
     console.log ('The form is showing on the page.');
     var sendMessage = function (event) {
 >>>>>>> parent of e275a64... Update crm-test-code.js
