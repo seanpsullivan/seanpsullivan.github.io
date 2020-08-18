@@ -1,12 +1,13 @@
 window.onload = function(){
-   console.log('loaded');
+   console.log("JS is loaded");
    // Check if the #createForm element exists
    var formPage = document.getElementById("createForm");
    if (formPage) {
+     console.log("This is a form page");
      var sendMessage = function (event) {
        // Send a postMessage to the parent page
        window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-       console.log('postMessage sent!');
+       console.log("postMessage sent!");
      };
        // Listen for an event after the form submits
        window.addEventListener('beforeunload', sendMessage, false); // Desktop
