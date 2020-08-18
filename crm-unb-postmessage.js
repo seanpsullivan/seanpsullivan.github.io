@@ -7,6 +7,7 @@ window.onload = function(){
   if (window.location.href.indexOf("inquirySource") > -1) {
      console.log("This is a confirmed submission page");
      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+     console.log("postMessage is sent");
   }
   // Check if the #createForm element exists
   var formPage = document.getElementById("createForm");
