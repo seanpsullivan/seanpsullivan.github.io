@@ -6,6 +6,8 @@ window.onload = function(){
     var hasText = content.indexOf("Your information has been submitted")!==-1;
     if(hasText){
       console.log("It's the thank-you page, that's what it says.")
+      window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
+      console.log("postMessage sent!");
     }
 
 
