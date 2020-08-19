@@ -10,8 +10,8 @@ window.onload = function(){
        console.log("postMessage sent!");
      };
        // Listen for an event after the form submits
-       window.addEventListener('beforeunload', sendMessage, false); // Desktop
-       window.addEventListener('pagehide', sendMessage, false); //iOS
+//       window.addEventListener('beforeunload', sendMessage, false); // Desktop
+  //     window.addEventListener('pagehide', sendMessage, false); //iOS
 
       // Force postal code to uppercase
      // https://www.the-art-of-web.com/html/input-field-uppercase/
