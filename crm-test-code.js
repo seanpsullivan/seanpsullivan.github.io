@@ -16,16 +16,10 @@ window.onload = function(){
    if (formPage) {
      console.log("This is a form page");
 
-//     var sendMessage = function (event) {
-       // Send a postMessage to the parent page
-  //     window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
-    //   console.log("postMessage sent!");
-    // };
-       // Listen for an event after the form submits
-//       window.addEventListener('beforeunload', sendMessage, false); // Desktop
-  //     window.addEventListener('pagehide', sendMessage, false); //iOS
+     // Find and remove "Request Information" header
+//     document.body.innerHTML = document.body.innerHTML.replace( /Request Information/g, "");
 
-      // Force postal code to uppercase
+    // Force postal code to uppercase
      // https://www.the-art-of-web.com/html/input-field-uppercase/
      function forceInputUppercase(e)
      {
