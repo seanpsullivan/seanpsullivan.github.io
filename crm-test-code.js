@@ -1,9 +1,12 @@
 window.onload = function(){
    console.log("JS is loaded");
 
-// Check page URL
-
-  
+    // Check for thank-you text
+    var content = document.body.textContent || document.body.innerText;
+    var hasText = content.indexOf("Your information has been submitted")!==-1;
+    if(hasText){
+      console.log("It's the thank-you page, that's what it says.")
+    }
 
 
    // Check if the #createForm element exists
