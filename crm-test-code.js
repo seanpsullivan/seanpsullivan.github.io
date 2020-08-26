@@ -17,11 +17,13 @@ window.onload = function(){
 
      // Find and remove "Request Information" header
      document.body.innerHTML = document.body.innerHTML.replace( /Request Information/g, "");
+     // Find and replace "Contact Information" header
+     document.body.innerHTML = document.body.innerHTML.replace( /Contact Information/g, "");
     // Set country to Canada
     $('#datatel_address1countryid').val('9acdfc65-203d-e811-80d8-02da73f1e652');
     // Set student type to High School
-    $('#unb_inquirytype').val('122810000');
-
+    //$('#unb_inquirytype').val('122810000');
+    // Needs to be modified to trigger High School dropdown
 
      // CSS changes to form
     $('body').css('font-family', 'Nunito Sans');
@@ -29,7 +31,7 @@ window.onload = function(){
     $('.condensed').css('background-color', 'transparent');
     $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none').css('margin','0');
     $('.container.elcn-widget').css('width', '100%');
-    $('input').css('border-radius', '3px');
+    $('input').css('border,', '0').css('background-color,', '#eee').css('padding,', '10px 10px').css('margin-bottom,', '15px').css('font-size,', '16px');
     $('h3').css('display', 'inline-block');
     $('.col-md-6.field').css('max-width', '98%');
 
