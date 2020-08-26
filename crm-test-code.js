@@ -25,7 +25,8 @@ window.onload = function(){
 
      // CSS changes to form
     $('body').css('font-family', 'Nunito Sans');
-    $('.container').css('max-width', '768px');
+    $('.container').css('width', '100%');
+    $('.condensed').css('background-color', 'transparent');
     $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none');
     $('.container.elcn-widget').css('width', '100%');
     $('input').css('border-radius', '3px');
