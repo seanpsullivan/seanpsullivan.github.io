@@ -25,11 +25,12 @@ window.onload = function(){
 
      // CSS changes to form
     $('body').css('font-family', 'Nunito Sans');
-    $('.container').css('width', '100%');
+  //  $('.container').css('width', '768px');
     $('.condensed').css('background-color', 'transparent');
-    $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none');
+    $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none').css('margin","0');
     $('.container.elcn-widget').css('width', '100%');
     $('input').css('border-radius', '3px');
+    $('h3').css('display', 'inline-block');
 
     // Add contest link
   //  $( ".submit-createaccount-button").after( "<br/><div><p><a href=''>See full contest rules</p></div>");
