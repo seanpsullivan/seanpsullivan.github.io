@@ -32,8 +32,12 @@ window.onload = function(){
     $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none').css('margin','0');
     $('.container.elcn-widget').css('width', '100%');
     $('input').css('border', '0').css('background-color', '#eee').css('padding', '10px 10px').css('margin-bottom', '15px').css('font-size', '16px');
+    $('select').css('border', '0').css('background-color', '#eee').css('padding', '10px 10px').css('margin-bottom', '15px').css('font-size', '16px');
+
     $('h3').css('display', 'inline-block');
     $('.col-md-6.field').css('max-width', '98%');
+    $('label, .label').css('font-size', '14px');
+    $('#9112ebb6-a2ee-15e4-da3a-6b60b5426587').css('font-size','16px')
 
     // Add contest link
   //  $( ".submit-createaccount-button").after( "<br/><div><p><a href=''>See full contest rules</p></div>");
