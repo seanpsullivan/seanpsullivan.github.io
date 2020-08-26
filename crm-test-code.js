@@ -33,7 +33,7 @@ window.onload = function(){
       var link = document.createElement('link');
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = 'crm-unb-css.css';
+      link.href = 'https://seanpsullivan.github.io/crm-unb-css.css';
       // Append link element to HTML head
       head.appendChild(link);
 
