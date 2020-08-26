@@ -15,20 +15,8 @@ body {
   background-color:#eee;
   margin-bottom:20px;
   font-size:16px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  position:relative;
 }
 
-.elcn-widget select:before {
-  content: "\25AE";  /* this is your text. You can also use UTF-8 character codes as I do here */
-  left:-5px;
-  position:absolute;
-  top:0;
-  font-weight:900;
-  font-family: "Font Awesome 5 Free";
-}
 
 .elcn-content {
   border-radius: 0;
