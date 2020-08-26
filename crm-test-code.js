@@ -25,6 +25,9 @@ window.onload = function(){
     //$('#unb_inquirytype').val('122810000');
     // Needs to be modified to trigger High School dropdown
 
+    // Placeholder for date
+    document.getElementsByName('birthdate')[0].setAttribute("placeholder", "MM/DD/YYYY");
+
      // CSS changes to form
     $('body').css('font-family', 'Nunito Sans');
     $('.container').css('width', '768px');
