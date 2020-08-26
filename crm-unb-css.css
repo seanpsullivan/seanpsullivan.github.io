@@ -10,9 +10,14 @@ body {
   font-size:16px;
 }
 
+.elcn-widget input:focus {
+  border:1px solid #DB143F;
+}
+
 .elcn-widget select {
   border:0;
   background-color:#eee;
+  padding:7px;
   margin-bottom:20px;
   font-size:16px;
 }
@@ -38,9 +43,9 @@ label, .label {
 }
 
 legend {
-  font-size:14px;
+  font-size:16px;
 }
 
-#9112ebb6-a2ee-15e4-da3a-6b60b5426587 {
+.section.container > label {
   font-size: 16px;
 }
