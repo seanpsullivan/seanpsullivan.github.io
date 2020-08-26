@@ -11,7 +11,7 @@ body {
 }
 
 .elcn-widget input:focus {
-  border:1px solid #DB143F;
+  border:1px solid #2AA9E4;
 }
 
 .elcn-widget select {
@@ -46,6 +46,6 @@ legend {
   font-size:16px;
 }
 
-.section.container > label {
-  font-size: 16px;
+#9112ebb6-a2ee-15e4-da3a-6b60b5426587 label {
+  font-size: 16px!important;
 }
