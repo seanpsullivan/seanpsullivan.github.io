@@ -31,7 +31,7 @@ window.onload = function(){
     $('.condensed').css('background-color', 'transparent');
     $('.elcn-content').css('border-radius', '0').css('box-shadow', 'none').css('margin','0');
     $('.container.elcn-widget').css('width', '100%');
-    $('input').css('border,', '0').css('background-color,', '#eee').css('padding,', '10px 10px').css('margin-bottom,', '15px').css('font-size,', '16px');
+    $('input').css('border', '0').css('background-color', '#eee').css('padding', '10px 10px').css('margin-bottom', '15px').css('font-size', '16px');
     $('h3').css('display', 'inline-block');
     $('.col-md-6.field').css('max-width', '98%');
 
