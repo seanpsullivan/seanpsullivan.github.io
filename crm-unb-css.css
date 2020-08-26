@@ -1,7 +1,33 @@
+body {
+  font-family:'Nunito Sans';
+}
+
 input,select {
   border:0;
   background-color:#eee;
   padding:10px 10px;
   margin-bottom:15px;
   font-size:16px;
+}
+
+.elcn-content {
+  border-radius: 0;
+  box-shadow:none;
+  margin:0;
+}
+
+.container.elcn-widget {
+    width: 100%;
+}
+
+.col-md-6.field {
+  max-width: 98%;
+}
+
+label, .label {
+  font-size: 14px;
+}
+
+#9112ebb6-a2ee-15e4-da3a-6b60b5426587 {
+  font-size: 16px;
 }
