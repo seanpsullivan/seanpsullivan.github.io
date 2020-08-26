@@ -26,7 +26,10 @@ window.onload = function(){
     // Needs to be modified to trigger High School dropdown
 
     // Placeholder for date
+    document.getElementsByName('firstname')[0].setAttribute("placeholder", "Your first name");
+    document.getElementsByName('lastname')[0].setAttribute("placeholder", "Your last name");
     document.getElementsByName('birthdate')[0].setAttribute("placeholder", "MM/DD/YYYY");
+    document.getElementsByName('emailaddress1')[0].setAttribute("placeholder", "Your email");
 
     // Add CSS file
       var head = document.getElementsByTagName('HEAD')[0];
