@@ -51,6 +51,10 @@ body {
   max-width: 98%;
 }
 
+.col-md-offset-0 {
+  width:100%;
+}
+
 label, .label {
   font-size: 14px;
   margin-bottom:5px;
@@ -67,7 +71,6 @@ legend {
 }
 
 /* submit button */
-
 .elcn-widget input[type="submit"] {
   background-color:#DB143F;
   font-size:24px;
