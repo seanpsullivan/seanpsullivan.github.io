@@ -12,7 +12,15 @@ body {
 
 .elcn-widget input:focus {
   border:1px solid #2AA9E4;
+  background-color:#f6f6f6;
 }
+
+/* visual constraints for form fields */
+input#address1_city {width:50%;}
+input#datatel_stateprovinceid {width:50%;}
+input#address1_postalcode {width:30%;}
+input#datatel_address1countryid {width:30%;}
+
 
 .elcn-widget select {
   border:0;
