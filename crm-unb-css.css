@@ -2,6 +2,11 @@ body {
   font-family:'Nunito Sans';
 }
 
+/* override bootstrap */
+.col-md-6 {
+  width:100%:
+}
+
 .elcn-widget input {
   border:0;
   background-color:#eee;
