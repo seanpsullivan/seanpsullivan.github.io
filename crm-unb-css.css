@@ -65,3 +65,10 @@ legend {
   font-size: 16px;
   font-weight:500;
 }
+
+/* submit button */
+
+.elcn-widget input[type="submit"] {
+  background-color:#DB143F;
+  font-size:24px;
+}

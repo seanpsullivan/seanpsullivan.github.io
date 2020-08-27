@@ -36,6 +36,9 @@ $    ("h3:contains('Contact Information')").remove();
     document.getElementsByName('birthdate')[0].setAttribute("placeholder", "MM/DD/YYYY");
     //  document.getElementsByName('emailaddress1')[0].setAttribute("placeholder", "Your email");
 
+    // Add contest link to bottom of page
+    $('.instructions ').after('<div><a style="font-size:18px; margin-top:20px" href="https://www.unb.ca/admissions/contest_rules.html" target="_blank">See contest rules</a></div>');
+
 
 
     // Add CSS file
