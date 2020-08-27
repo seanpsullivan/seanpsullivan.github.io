@@ -3,8 +3,9 @@ body {
 }
 
 /* override bootstrap */
-.row > .col-md-6 {
-  width:100%:
+@media (min-width: 992px)
+.col-md-6 {
+    width: 100%;
 }
 
 .elcn-widget input {
