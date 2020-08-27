@@ -39,7 +39,8 @@ $    ("h3:contains('Contact Information')").remove();
     // Add contest link to bottom of page
     $('.instructions ').after('<div><a style="font-size:18px; margin-top:20px" href="https://www.unb.ca/admissions/contest_rules.html" target="_blank">See contest rules</a></div>');
 
-
+    // Move privacy and rules after submit button
+    $("#685c6142-3767-a320-e711-0ab14ca0b67d").appendTo(".submit-createaccount-button");
 
     // Add CSS file
       var head = document.getElementsByTagName('HEAD')[0];

@@ -23,6 +23,10 @@ body {
   transition: 0.5s;
 }
 
+.fieldset {
+  margin:10px 0;
+}
+
 /* visual constraints for form fields */
 @media (min-width: 768px) {
   input#address1_city {width:50%;}
