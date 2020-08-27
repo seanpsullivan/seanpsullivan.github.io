@@ -23,15 +23,19 @@ $    ("h3:contains('Contact Information')").remove();
      //document.body.innerHTML = document.body.innerHTML.replace( /Contact Information/g, "");
     // Set country to Canada
     $('#datatel_address1countryid').val('9acdfc65-203d-e811-80d8-02da73f1e652');
-    // Set student type to High School
-    //$('#unb_inquirytype').val('122810000');
-    // Needs to be modified to trigger High School dropdown
 
-    // Placeholder for date
-//    document.getElementsByName('firstname')[0].setAttribute("placeholder", "Your first name");
-  //  document.getElementsByName('lastname')[0].setAttribute("placeholder", "Your last name");
+    // Focus on first field
+    $("#firstname").focus();
+
+
+
+    // Placeholders
+    //    document.getElementsByName('firstname')[0].setAttribute("placeholder", "Your first name");
+    //  document.getElementsByName('lastname')[0].setAttribute("placeholder", "Your last name");
     document.getElementsByName('birthdate')[0].setAttribute("placeholder", "MM/DD/YYYY");
-  //  document.getElementsByName('emailaddress1')[0].setAttribute("placeholder", "Your email");
+    //  document.getElementsByName('emailaddress1')[0].setAttribute("placeholder", "Your email");
+
+
 
     // Add CSS file
       var head = document.getElementsByTagName('HEAD')[0];
