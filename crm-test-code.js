@@ -27,7 +27,6 @@ $    ("h3:contains('Contact Information')").remove();
     // Focus on first field
     $("#firstname").focus();
 
-
     // Add class to the list of programs so we can style text
     $( "#9112ebb6-a2ee-15e4-da3a-6b60b5426587" ).addClass( "programs" );
 
