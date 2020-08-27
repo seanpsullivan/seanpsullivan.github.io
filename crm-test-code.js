@@ -16,7 +16,7 @@ window.onload = function(){
      console.log("This is a form page");
 
      // Find and remove "Request Information" header
-     $("h3:contains('Request Information')").remove();
+     $("h4:contains('Request Information')").remove();
      //document.body.innerHTML = document.body.innerHTML.replace( /Request Information/g, "");
      // Find and replace "Contact Information" header
 $    ("h3:contains('Contact Information')").remove();
