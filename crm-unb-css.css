@@ -79,5 +79,6 @@ legend {
 /* submit button */
 .elcn-widget input[type="submit"] {
   background-color:#DB143F;
-  font-size:24px;
+  font-size:20px;
+  margin-bottom:50px;
 }
