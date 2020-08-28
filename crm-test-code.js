@@ -17,10 +17,8 @@ window.onload = function(){
 
      // Find and remove "Request Information" header
      $("h4:contains('Request Information')").remove();
-     //document.body.innerHTML = document.body.innerHTML.replace( /Request Information/g, "");
      // Find and replace "Contact Information" header
 $    ("h3:contains('Contact Information')").remove();
-     //document.body.innerHTML = document.body.innerHTML.replace( /Contact Information/g, "");
     // Set country to Canada
     $('#datatel_address1countryid').val('9acdfc65-203d-e811-80d8-02da73f1e652');
 
