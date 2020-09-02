@@ -2,15 +2,6 @@
 
 // Load GTM
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T7FNXXD');</script>
-<!-- End Google Tag Manager -->
-
-
 window.onload = function(){
    console.log("JS is loaded");
 
@@ -22,6 +13,17 @@ window.onload = function(){
       window.parent.postMessage('postMessage says hello!', 'https://www.unb.ca');
       console.log("postMessage sent!");
     }
+
+   // Form pages only
+
+   // Add GTM to head
+   console.log('adding gtm');
+
+   $('head').append('<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-T7FNXXD');</script>');
 
    // Check if the #createForm element exists
    var formPage = document.getElementById("createForm");
