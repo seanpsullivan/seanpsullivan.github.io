@@ -82,6 +82,7 @@ $    ("h3:contains('Contact Information')").remove();
           }
         });
         window.addEventListener('pagehide', function() {
+          console.log('navigating away');
           if (history.length) {
             window.dataLayer.push({
               'event' : 'formAbandonment',
