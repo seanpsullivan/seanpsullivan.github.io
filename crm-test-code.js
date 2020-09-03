@@ -81,21 +81,29 @@ $    ("h3:contains('Contact Information')").remove();
             });
           }
         });
-        window.addEventListener('pagehide', function() {
-          console.log('navigating away');
-          if (history.length) {
-            window.dataLayer.push({
-              'event' : 'formAbandonment',
-              'eventCategory' : 'Form Abandonment',
-              'eventAction' : history.join(' > ')
-            });
+
+        window.addEventListener("message", receiveMessage, false);
+          function receiveMessage(event) {
+            console.log("message received from parent page");
+            if (event.origin !== "https://www.unb.ca")
+            return;
+            if (history.length) {
+              console.log('pushing to datalayer now');
+               window.dataLayer.push({
+                 'event' : 'formAbandonment',
+                 'eventCategory' : 'Form Abandonment',
+                 'eventAction' : history.join(' > ')
+               });
+             }
           }
-        });
+
 
         document.querySelector(formSelector).addEventListener('change', function(e) {
           history.push(e['target'].getAttribute(attribute));
         });
       })();
+
+
 
 
    } // end formpage if
