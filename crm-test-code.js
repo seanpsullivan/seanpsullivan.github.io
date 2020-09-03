@@ -72,6 +72,7 @@ $    ("h3:contains('Contact Information')").remove();
         var formSelector = 'form'; // Modify this CSS selector to match your form. Default is first form on the page.
         var attribute = 'name';
         var history = [];
+
         window.addEventListener('beforeunload', function() {
           if (history.length) {
             window.dataLayer.push({

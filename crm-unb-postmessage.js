@@ -68,24 +68,32 @@ $    ("h3:contains('Contact Information')").remove();
         var formSelector = 'form'; // Modify this CSS selector to match your form. Default is first form on the page.
         var attribute = 'name';
         var history = [];
-        window.addEventListener('beforeunload', function() {
-          if (history.length) {
-            window.dataLayer.push({
-              'event' : 'formAbandonment',
-              'eventCategory' : 'Form Abandonment',
-              'eventAction' : history.join(' > ')
-            });
+
+  //      window.addEventListener('beforeunload', function() {
+  //        if (history.length) {
+  //          window.dataLayer.push({
+  //            'event' : 'formAbandonment',
+  //            'eventCategory' : 'Form Abandonment',
+  //            'eventAction' : history.join(' > ')
+  //          });
+  //        }
+  //      });
+
+        window.addEventListener("message", receiveMessage, false);
+          function receiveMessage(event) {
+            console.log("message received from parent page");
+            if (event.origin !== "https://www.unb.ca")
+            return;
+            console.log("it's from unb!");
+            if (history.length) {
+              console.log('pushing to datalayer now');
+               window.dataLayer.push({
+                 'event' : 'formAbandonment',
+                 'eventCategory' : 'Form Abandonment',
+                 'eventAction' : history.join(' > ')
+               });
+             }
           }
-        });
-        window.addEventListener('pagehide', function() {
-          if (history.length) {
-            window.dataLayer.push({
-              'event' : 'formAbandonment',
-              'eventCategory' : 'Form Abandonment',
-              'eventAction' : history.join(' > ')
-            });
-          }
-        });
 
         document.querySelector(formSelector).addEventListener('change', function(e) {
           history.push(e['target'].getAttribute(attribute));
