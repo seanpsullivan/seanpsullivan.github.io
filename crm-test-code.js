@@ -87,6 +87,7 @@ $    ("h3:contains('Contact Information')").remove();
             console.log("message received from parent page");
             if (event.origin !== "https://www.unb.ca")
             return;
+            console.log("it's from unb!");
             if (history.length) {
               console.log('pushing to datalayer now');
                window.dataLayer.push({
