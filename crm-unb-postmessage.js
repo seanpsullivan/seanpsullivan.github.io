@@ -61,6 +61,7 @@ $    ("h3:contains('Contact Information')").remove();
      }
      document.getElementById("address1_postalcode").addEventListener("keyup", forceInputUppercase, false);
 
+
      // Track form abandonment
      // https://www.simoahava.com/analytics/track-form-abandonment-with-google-tag-manager/
      (function() {
@@ -75,15 +76,8 @@ $    ("h3:contains('Contact Information')").remove();
               'eventAction' : history.join(' > ')
             });
           }
-          window.addEventListener('pagehide', function() {
-            if (history.length) {
-              window.dataLayer.push({
-                'event' : 'formAbandonment',
-                'eventCategory' : 'Form Abandonment',
-                'eventAction' : history.join(' > ')
-              });
-            }
         });
+
         document.querySelector(formSelector).addEventListener('change', function(e) {
           history.push(e['target'].getAttribute(attribute));
         });
