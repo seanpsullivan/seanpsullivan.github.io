@@ -98,12 +98,10 @@ $    ("h3:contains('Contact Information')").remove();
              }
           }
 
-
         document.querySelector(formSelector).addEventListener('change', function(e) {
           history.push(e['target'].getAttribute(attribute));
         });
       })();
-
 
 
 
