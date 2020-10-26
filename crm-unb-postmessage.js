@@ -15,6 +15,15 @@ window.onload = function(){
    if (formPage) {
      console.log("This is a form page");
 
+     // Add CSS file
+       var head = document.getElementsByTagName('HEAD')[0];
+       var link = document.createElement('link');
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+       link.href = 'https://seanpsullivan.github.io/crm-unb-css.css';
+       // Append link element to HTML head
+       head.appendChild(link);
+
      // Find and remove "Request Information" header
      $("h4:contains('Request Information')").remove();
      // Find and replace "Contact Information" header
@@ -40,14 +49,6 @@ $    ("h3:contains('Contact Information')").remove();
     // Move privacy and rules after submit button
     $("#685c6142-3767-a320-e711-0ab14ca0b67d").appendTo(".submit-createaccount-button");
 
-    // Add CSS file
-      var head = document.getElementsByTagName('HEAD')[0];
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'https://seanpsullivan.github.io/crm-unb-css.css';
-      // Append link element to HTML head
-      head.appendChild(link);
 
 
     // Force postal code to uppercase
