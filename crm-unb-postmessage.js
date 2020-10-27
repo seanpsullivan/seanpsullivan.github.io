@@ -19,7 +19,7 @@ window.onload = function(){
       $( "#3181ae19-5a5e-c920-73d2-c7a6db07a86a" ).css("display","none");
       $( "#79d66ee9-897e-e02c-4977-6739e5ee5d3d" ).css("display","none");
       // Hide campaign brochure text
-      $("h3:contains('Campaign Brochure')").remove();
+    //  $("h3:contains('Campaign Brochure')").remove();
     }
 
    // Check if the #createForm element exists
