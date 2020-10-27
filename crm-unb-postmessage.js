@@ -27,6 +27,16 @@ window.onload = function(){
    if (formPage) {
      console.log("This is a form page");
 
+     // Add CSS file
+       var head = document.getElementsByTagName('HEAD')[0];
+       var link = document.createElement('link');
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+       link.href = 'https://seanpsullivan.github.io/crm-unb-css.css';
+       // Append link element to HTML head
+       head.appendChild(link);
+
+
      // Find and remove "Request Information" header
      $("h4:contains('Request Information')").remove();
      // Find and replace "Contact Information" header
@@ -36,16 +46,6 @@ window.onload = function(){
 
     // Focus on first field
     $("#firstname").focus();
-
-    // Add CSS file
-      var head = document.getElementsByTagName('HEAD')[0];
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'https://seanpsullivan.github.io/crm-unb-css.css';
-      // Append link element to HTML head
-      head.appendChild(link);
-
 
     // Add class to the list of programs so we can style text
     $( "#9112ebb6-a2ee-15e4-da3a-6b60b5426587" ).addClass( "programs" );
