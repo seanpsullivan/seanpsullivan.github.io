@@ -10,6 +10,18 @@ window.onload = function(){
       console.log("postMessage sent!");
     }
 
+    // Check to see if we're on gradcampaign page
+    var content = document.body.textContent || document.body.innerText;
+    var hasText = content.indexOf("Campaign Brochure")!==-1;
+    if(hasText){
+      console.log("This is the brochure page.");
+      // Hide Ellucian fields that aren't necessary on the page
+      $( "#3181ae19-5a5e-c920-73d2-c7a6db07a86a" ).css("display","none");
+      $( "#79d66ee9-897e-e02c-4977-6739e5ee5d3d" ).css("display","none");
+      // Hide campaign brochure text
+      $("h3:contains('Campaign Brochure')").remove();
+    }
+
    // Check if the #createForm element exists
    var formPage = document.getElementById("createForm");
    if (formPage) {
@@ -24,10 +36,11 @@ window.onload = function(){
        // Append link element to HTML head
        head.appendChild(link);
 
+
      // Find and remove "Request Information" header
      $("h4:contains('Request Information')").remove();
      // Find and replace "Contact Information" header
-$    ("h3:contains('Contact Information')").remove();
+    $("h3:contains('Contact Information')").remove();
     // Set country to Canada
     $('#datatel_address1countryid').val('9acdfc65-203d-e811-80d8-02da73f1e652');
 
