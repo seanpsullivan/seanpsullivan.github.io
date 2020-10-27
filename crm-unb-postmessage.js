@@ -20,6 +20,7 @@ window.onload = function(){
       $( "#79d66ee9-897e-e02c-4977-6739e5ee5d3d" ).css("display","none");
       // Hide campaign brochure text
       $("h3:contains('Campaign Brochure')").remove();
+      $(".crm-form").css("padding-left","20px");
     }
 
    // Check if the #createForm element exists
